@@ -30,4 +30,9 @@ export HADOOP_INSTALL=$HADOOP_HOME
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
 export PATH=${JAVA_HOME}/bin:${PATH}
 
+
 				
+(base) azureuser@myvm:~$ ls downloads/
+Anaconda3-2019.10-Linux-x86_64.sh  hadoop-3.2.1.tar.gz  jre-8u241-linux-x64.tar.gz
+(base) azureuser@myvm:~$ ls programfiles/
+hadoop-3.2.1

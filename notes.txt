@@ -1,0 +1,33 @@
+Installed emacs, links, lynx
+
+1. Installed jdk and jre
+
+sudo apt install openjdk-9-jre-headless
+sudo apt install openjdk-9-jdk-headless
+
+2. Configure java home
+
+export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64/
+in bashrc
+
+3. sudo timedatectl set-timezone Asia/Kolkata
+
+4. Installed hadoop
+
+Download the targz and unzipped
+
+export HADOOP_HOME=$HOME/programfiles/hadoop-3.2.1/
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export HADOOP_INSTALL=$HADOOP_HOME 
+
+
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+				

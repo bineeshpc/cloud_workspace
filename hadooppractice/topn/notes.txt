@@ -1,0 +1,16 @@
+// Sorting problem
+// select * from table order by followers;
+
+// map phase
+// reduce phase
+// M -> R
+// each mapper works on a subset of data
+// mappers run in parallel seeing a subset of the data
+// mapper sends top n to reducer
+// reducer calculates overall top n
+// olympics
+// top 3 from each country
+// and then the overall top 3 are found
+// a single reducer should be used
+// 2 reducers is like having 2 olympics
+// total order partitioning using multiple reducers (advanced topic)

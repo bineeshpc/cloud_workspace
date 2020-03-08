@@ -26,7 +26,7 @@ export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 export HADOOP_INSTALL=$HADOOP_HOME 
 
 
-export HADOOP_INSTALL=$HADOOP_HOME
+
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
 export PATH=${JAVA_HOME}/bin:${PATH}
 
@@ -36,3 +36,19 @@ export PATH=${JAVA_HOME}/bin:${PATH}
 Anaconda3-2019.10-Linux-x86_64.sh  hadoop-3.2.1.tar.gz  jre-8u241-linux-x64.tar.gz
 (base) azureuser@myvm:~$ ls programfiles/
 hadoop-3.2.1
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/azureuser/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/azureuser/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/azureuser/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/azureuser/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

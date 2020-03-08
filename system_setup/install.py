@@ -19,7 +19,7 @@ def run(command):
 
 def set_java():
     def install():
-        run_as_user("root", "apt install openjdk-9-jdk-headless")
+        run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install openjdk-9-jdk-headless")
 
     def configure_java():
         run("echo 'export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64/' >> ~/.bashrc")
@@ -29,7 +29,7 @@ def set_java():
 
 def set_timezone():
     def install():
-        run_as_user("root", "apt install timedatectl")
+        run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install timedatectl")
 
     def timezone():    
         run_as_user("root", "timedatectl set-timezone Asia/Kolkata")

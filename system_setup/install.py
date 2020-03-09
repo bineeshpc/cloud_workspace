@@ -19,6 +19,7 @@ def run(command):
 
 def set_java():
     def install():
+        run_as_user("root", "apt-get update")
         run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install openjdk-9-jdk-headless")
 
     def configure_java():
@@ -34,9 +35,31 @@ def set_timezone():
     def timezone():    
         run_as_user("root", "timedatectl set-timezone Asia/Kolkata")
 
-    install()
+    # install()
     timezone()
     
+def set_swap():
+    def install():
+        run_as_user("root", "fallocate -l 1G /swapfile")
+        run_as_user("root", "chmod 600 /swapfile")
+        run_as_user("root", "mkswap /swapfile")
+        # swap on option
+        # edit the file instead of doing swapon
+        # sudo nano /etc/fstab
+        run_as_user("root", "swapon /swapfile")
+        
+        run_as_user("root", "swapon --show")
+        
+    install()
+    
+def set_editors():
+    def install():
+        run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install emacs")
+        run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install vim")
+        
+    install()
+        
+        
 def set_hadoop():
     def install():
         run("mkdir -p downloads")
@@ -94,6 +117,8 @@ def main():
     # run_as_user("root", "echo 123 > /tmp/toot.txt")           
     # set_java()
     # set_timezone()
+    # set_editors()
+    # set_swap()
     # set_hadoop()
     # set_anaconda()
 

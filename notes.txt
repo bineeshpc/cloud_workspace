@@ -52,3 +52,35 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+apt-get update
+
+https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-18-04/
+
+sudo fallocate -l 1G /swapfile
+
+sudo chmod 600 /swapfile
+
+sudo mkswap /swapfile
+
+sudo swapon /swapfile
+
+sudo nano /etc/fstab # did not do
+
+sudo swapon --show
+
+Increase hadoop heapsize
+
+
+https://stackoverflow.com/questions/15609909/error-java-heap-space
+
+
+https://stackoverflow.com/questions/34727008/how-to-increase-java-heap-size-in-hadoop
+export HADOOP_HEAPSIZE=4096
+<property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx4096m</value>
+</property>
+
+sudo apt-get install nodejs-legacy

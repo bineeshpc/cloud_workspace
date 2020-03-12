@@ -84,3 +84,6 @@ export HADOOP_HEAPSIZE=4096
 </property>
 
 sudo apt-get install nodejs-legacy
+
+(base) azureuser@affordablevm:~/cloud_workspace$ git config --global user.name "Bineesh Chandrasekharan"
+(base) azureuser@affordablevm:~/cloud_workspace$ git config --global user.email "bineeshpc@gmail.com"

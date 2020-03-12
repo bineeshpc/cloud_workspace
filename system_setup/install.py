@@ -58,8 +58,14 @@ def set_editors():
         run_as_user("root", "DEBIAN_FRONTEND=noninteractive apt-get --yes --allow-downgrades install vim")
         
     install()
+     
+def set_git():
+    def configure():
+        run("git config --global user.name \"Bineesh Chandrasekharan\"")
+        run("git config --global user.email \"bineeshpc@gmail.com\"")
         
-        
+    configure()
+
 def set_hadoop():
     def install():
         run("mkdir -p downloads")
@@ -118,6 +124,7 @@ def main():
     # set_java()
     # set_timezone()
     # set_editors()
+    # set_git()
     # set_swap()
     # set_hadoop()
     # set_anaconda()
